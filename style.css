@@ -24,6 +24,7 @@ h2 {
     font-size: 3rem !important;
     font-weight: 300 !important;
     text-transform: uppercase;
+    padding-bottom: 50px;
 }
 h3 {
     font-family: 'Quicksand', sans-serif;
@@ -43,13 +44,6 @@ p {
     text-align: center;
 }
 
-.typed p {
-    overflow: hidden;
-    /* white-space: nowrap; */
-    margin: 0 auto;
-    letter-spacing: .15em;
-}
-
 /* ABOUT */
 #about {
     background: #c9f5e2 !important;
@@ -64,17 +58,13 @@ p {
     padding-top: 100px;
 }
 
-#about h2 {
-    padding-bottom: 50px;
-}
-
 #about p {
     max-width: 800px;
     padding-bottom: 20px;
     text-align: left;
 }
 
-.img-div {
+/* .img-div {
     width: 250px;
     height: 250px;
     margin-top: 50px;
@@ -87,11 +77,25 @@ p {
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 100px;
+} */
+
+.img-div {
+    margin: 50px 0 100px 0;
 }
 .img-div img {
-    height: 450px;
+    height: 150px;
     position: relative;
-    top: -30px;
+}
+
+.img-div img:nth-child(2) {
+    height: 100px;
+    padding: 0 50px 0 50px;
+    animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+@keyframes beat {
+	to { transform: scale(1.1); }
 }
 
 /* PORTFOLIO */
@@ -106,10 +110,6 @@ p {
 
 #portfolio .row {
     padding-top: 100px;
-}
-
-#portfolio h2 {
-    padding-bottom: 50px;
 }
 
 .panel-group {
@@ -237,6 +237,40 @@ p {
     color: #555;
 }
 
+/* LINKS */
+#links {
+    background: #c9f5e2 !important;
+    border-right: 20px solid #fff;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid #fff;
+    height: 100%;
+    text-align: center;
+}
+
+#links .row {
+    padding-top: 100px;
+}
+
+.me-img {
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow:
+        0 0 0 2px hsl(0, 0%, 90%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+}
+.me-img img {
+    height: 450px;
+    position: relative;
+    top: -30px;
+}
+
 @media only screen and (max-width: 750px) {
     #about .row {
         padding-top: 50px;
@@ -244,10 +278,6 @@ p {
 
     #about p {
         width: 600px;
-    }
-
-    .img-div {
-        margin-bottom: 50px;
     }
 }
 
